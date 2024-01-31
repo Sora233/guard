@@ -4,6 +4,8 @@ Dead simple json marshal guard for potential data type mismatch (eg. marshal arr
 
 ## Usage
 
+[See Doc](https://pkg.go.dev/github.com/Sora233/guard)
+
 ```go
 package main
 
@@ -31,7 +33,8 @@ func main() {
 	if response.Data.IsSuccess() {
 		fmt.Println("content is", response.Data.Get().Content)
 	} else {
-		fmt.Println("can not get content because wrong body data", response.Data.GetRaw())
+		fmt.Println("can not get content because of wrong body data", string(response.Data.GetRaw()))
 	}
 }
+
 ```

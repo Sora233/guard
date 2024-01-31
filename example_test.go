@@ -24,6 +24,6 @@ func ExampleGuard() {
 	if response.Data.IsSuccess() {
 		fmt.Println("content is", response.Data.Get().Content)
 	} else {
-		fmt.Println("can not get content because wrong body data", response.Data.GetRaw())
+		fmt.Println("can not get content because of wrong body data", string(response.Data.GetRaw()))
 	}
 }
